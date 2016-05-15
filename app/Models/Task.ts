@@ -1,20 +1,20 @@
 import {ITask} from "./ITask";
 
 export class Task implements ITask {
-    private Id;
-    private Title;
-    private Description;
-    private Complete;
+    private id;
+    private title;
+    private description;
+    private complete;
     constructor(
         id:number,
         title:string,
         description:string,
         complete:boolean
     ) {
-        this.Id = id;
-        this.Title = title;
-        this.Description = description;
-        this.Complete = complete;
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.complete = complete;
     }
     get Id() {
         return this.Id;
