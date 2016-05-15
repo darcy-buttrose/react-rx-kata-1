@@ -1,6 +1,6 @@
 export interface ITask {
-    id:number,
-    title:string,
-    description:string,
-    complete:boolean
+    Id:number,
+    Title:string,
+    Description:string,
+    Complete:boolean
 }
