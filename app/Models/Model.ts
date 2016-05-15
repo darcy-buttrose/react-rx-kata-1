@@ -25,7 +25,13 @@ function nextIdReducer(state:number, action:IAction):number {
 function todosReducer(state:List<ITask>,action:IAction):List<ITask> {
     switch(action.key) {
         case Keys.add:
-            return List<ITask>(state.concat(<ITask>action.payload));
+            let todo = <ITask>action.payload;
+            return List<ITask>(state.concat(new Task(
+                todo.Id,
+                todo.Title,
+                todo.Description,
+                todo.Complete
+            )));
         case Keys.complete:
             return List<ITask>(state.map((todo) => {
                 if (todo.Id === <number>action.payload) {
